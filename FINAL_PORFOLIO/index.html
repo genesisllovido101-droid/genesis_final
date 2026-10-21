@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Genesis Llovido Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Shippori+Mincho+B1:wght@500;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="ash" class="layer" aria-hidden="true"></canvas>
+<canvas id="fx" class="layer" aria-hidden="true"></canvas>
+<div class="eye" id="eye" aria-hidden="true">
+  <svg viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+    <g class="ball">
+      <path d="M2 22 Q22 3 42 22 Q22 41 2 22 Z" fill="#050505" stroke="#ff2a3d" stroke-width="1.6"/>
+      <g id="iris">
+        <circle cx="22" cy="22" r="9" fill="#c1121f"/>
+        <circle cx="22" cy="22" r="9" fill="none" stroke="#ff4d5e" stroke-width="1"/>
+        <ellipse cx="22" cy="22" rx="2" ry="7.5" fill="#050505"/>
+      </g>
+      <path d="M2 22 L-0 21 M42 22 L44 23" stroke="#ff2a3d" stroke-width="1.2"/>
+    </g>
+  </svg>
+</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#home" aria-label="Genesis Llovido, back to top"><b>喰</b>Genesis</a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#home" data-spy>Home</a></li>
+        <li><a href="#about" data-spy>About</a></li>
+        <li><a href="#skills" data-spy>Skills</a></li>
+        <li><a href="#projects" data-spy>Projects</a></li>
+        <li><a href="#contact" data-spy>Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- HOME -->
+  <section id="home">
+    <div class="bigkanji" aria-hidden="true">喰種</div>
+    <div class="wrap hero">
+      <div>
+        <p class="eyebrow reveal">Portfolio &nbsp;/&nbsp; 2026 &nbsp;/&nbsp; 東京</p>
+        <h1 class="reveal"><span class="glitch" data-text="Genesis Llovido">Genesis Llovido</span></h1>
+        <p class="role reveal">I'm a <span id="typed">web developer</span><span class="caret" aria-hidden="true"></span></p>
+        <p class="reveal">I build websites, lift heavy, run at night and watch more anime than I should. This page is what happens when all of that collides.</p>
+        <div class="btns reveal">
+          <a class="btn solid" href="#projects">See my work</a>
+          <a class="btn" href="#contact">Get in touch</a>
+        </div>
+      </div>
+      <div class="avatar-col reveal">
+        <div class="avatar">
+          <svg class="ring" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="48.5" fill="none" stroke="#c1121f" stroke-width=".6" stroke-dasharray="2 3"/></svg>
+          <svg class="ring ring2" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="48.5" fill="none" stroke="#ece6dd" stroke-opacity=".35" stroke-width=".4" stroke-dasharray="14 9 3 9"/></svg>
+          <!-- To use your real photo permanently: replace the src of #avatarImg with your image file or a data: URI and remove the hidden attribute from it; hide #avatarArt. -->
+          <div class="frame">
+            <img
+  id="avatarImg"
+  src="cute.jpg"
+  alt="Profile photo of Genesis Llovido"
+>
+            <svg id="avatarArt" viewBox="0 0 200 200" role="img" aria-label="Placeholder profile silhouette with one red ghoul eye">
+              <defs>
+                <radialGradient id="glow" cx="50%" cy="42%" r="65%"><stop offset="0" stop-color="#3a0a10"/><stop offset="1" stop-color="#0a0a0c"/></radialGradient>
+              </defs>
+              <rect width="200" height="200" fill="url(#glow)"/>
+              <path d="M100 52c-26 0-40 18-40 42 0 18 8 32 18 40-26 8-48 22-52 66h148c-4-44-26-58-52-66 10-8 18-22 18-40 0-24-14-42-40-42z" fill="#050505"/>
+              <path d="M66 86c10-30 26-38 40-36 16 2 26 14 28 34-12-12-24-16-36-14-12 2-24 8-32 16z" fill="#16161b"/>
+              <path d="M104 98 Q116 90 128 98 Q116 108 104 98Z" fill="#050505" stroke="#ff2a3d" stroke-width="1.4"/>
+              <circle cx="116" cy="98" r="5" fill="#c1121f"/><ellipse cx="116" cy="98" rx="1.1" ry="4.4" fill="#050505"/>
+              <path d="M74 98 Q86 90 98 98 Q86 106 74 98Z" fill="#0a0a0c" stroke="#3a3a44" stroke-width="1"/>
+            </svg>
+          </div>
+          <span class="tag">KAKUGAN ACTIVE</span>
+        </div>
+        <input type="file" id="photo" accept="image/*" class="sr">
+        <button type="button" class="photo-btn" id="photoBtn">Preview your photo here</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="slash" aria-hidden="true"></div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap">
+      <p class="eyebrow">Who's behind the mask</p>
+      <h2 class="reveal"><span class="kj" aria-hidden="true">私</span>About me</h2>
+      <div class="about-grid">
+        <div class="reveal">
+          <p>Hi, I'm Genesis. I like building things that move: interfaces that react, pages that feel alive, and systems that connect software to the real world.</p>
+          <p>Right now I'm working on a LoRa-based system that tracks a professor's indoor location and monitors the classroom using radio frequency. Outside the screen, the gym and the road keep me sharp, and anime keeps me inspired.</p>
+          <dl class="facts">
+            <div><dt>Focus</dt><dd>Front-end web development</dd></div>
+            <div><dt>Training</dt><dd>Gym sessions and jogging</dd></div>
+            <div><dt>Watching</dt><dd>Anime, always</dd></div>
+            <div><dt>Building</dt><dd>LoRa indoor tracking and classroom monitoring</dd></div>
+          </dl>
+        </div>
+        <div class="hobbies" aria-label="Hobbies">
+          <article class="hobby reveal">
+            <span class="kj" aria-hidden="true">鍛</span>
+            <div><h3>Gym</h3><p>Heavy lifts and slow progress. Every session is a rep toward a stronger version of me.</p></div>
+          </article>
+          <article class="hobby reveal">
+            <span class="kj" aria-hidden="true">走</span>
+            <div><h3>Jogging</h3><p>Quiet streets, headphones on, nothing to think about except the next stride.</p></div>
+          </article>
+          <article class="hobby reveal">
+            <span class="kj" aria-hidden="true">観</span>
+            <div><h3>Anime</h3><p>Stories about monsters and the people inside them. Tokyo Ghoul is the mood of this whole page.</p></div>
+          </article>
+        </div>
+      </div>
+      <figure class="quote reveal" style="margin-inline:0">
+        <blockquote>Every rep, every mile, every line of code. I'm becoming someone the old me wouldn't recognize.</blockquote>
+        <cite>My motto</cite>
+      </figure>
+    </div>
+  </section>
+
+  <div class="slash" aria-hidden="true"></div>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="wrap">
+      <p class="eyebrow">What I fight with</p>
+      <h2 class="reveal"><span class="kj" aria-hidden="true">技</span>Skills</h2>
+      <div class="skills">
+        <div class="skill reveal">
+          <div class="skill-top"><h3>HTML</h3><span>90%</span></div>
+          <div class="bar" role="img" aria-label="HTML skill level 90 percent"><i style="--lvl:90%"></i></div>
+          <p>Semantic, accessible structure that holds everything else up.</p>
+        </div>
+        <div class="skill reveal">
+          <div class="skill-top"><h3>CSS</h3><span>85%</span></div>
+          <div class="bar" role="img" aria-label="CSS skill level 85 percent"><i style="--lvl:85%"></i></div>
+          <p>Grid, flexbox, custom properties and the animations you are watching right now.</p>
+        </div>
+        <div class="skill reveal">
+          <div class="skill-top"><h3>JavaScript</h3><span>80%</span></div>
+          <div class="bar" role="img" aria-label="JavaScript skill level 80 percent"><i style="--lvl:80%"></i></div>
+          <p>DOM work, canvas effects and interactions, like the eye that follows your mouse.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="slash" aria-hidden="true"></div>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="wrap">
+    <p class="eyebrow">Things I've made</p>
+    <h2 class="reveal">
+      <span class="kj" aria-hidden="true">作</span>Projects
+    </h2>
+
+    <div class="projects">
+
+      
+
+      <!-- ACTIVITY 1 -->
+      <article class="project reveal" data-hot>
+        <span class="kind">Activity 01</span>
+        <h3>AJAX Demo</h3>
+        <p>A web development activity demonstrating AJAX functionality.</p>
+        <ul class="tags">
+          <li>HTML</li>
+          <li>JavaScript</li>
+          <li>AJAX</li>
+        </ul>
+        <a class="view" href="projects/AJAX_DEMO/index.html"
+           target="_blank" rel="noopener">View Activity ↗</a>
+      </article>
+
+      <!-- ACTIVITY 2 -->
+      <article class="project reveal" data-hot>
+        <span class="kind">Activity 02</span>
+        <h3>DOM Event Listener</h3>
+        <p>An interactive activity demonstrating JavaScript DOM events.</p>
+        <ul class="tags">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+        </ul>
+        <a class="view" href="projects/AJAX_DEMO/DOM_EVENTLISTENER/index.html"
+           target="_blank" rel="noopener">View Activity ↗</a>
+      </article>
+
+      <!-- ACTIVITY 3 -->
+      <article class="project reveal" data-hot>
+        <span class="kind">Activity 03</span>
+        <h3>jQuery</h3>
+        <p>A web development activity demonstrating jQuery.</p>
+        <ul class="tags">
+          <li>HTML</li>
+          <li>JavaScript</li>
+          <li>jQuery</li>
+        </ul>
+        <a class="view" href="projects/AJAX_DEMO/DOM_EVENTLISTENER/JQuery/index.html"
+           target="_blank" rel="noopener">View Activity ↗</a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<div class="slash" aria-hidden="true"></div>
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="wrap">
+      <p class="eyebrow">Don't be shy</p>
+      <h2 class="reveal"><span class="kj" aria-hidden="true">連</span>Contact</h2>
+      <div class="contact-grid">
+        <div class="reveal">
+          <p>Got a project, an idea, or just want to talk anime and gym splits? Send me a message and I'll get back to you.</p>
+          <div class="mail">
+            <code id="mailText">genesisllovido.pdm@gmail.com</code>
+            <button type="button" id="copyMail">Copy</button>
+          </div>
+          <p id="copyNote" class="muted" style="margin-top:10px;font-size:.9rem" aria-live="polite"></p>
+        </div>
+        <form id="contactForm" class="reveal" novalidate>
+          <label for="name">Name<input id="name" name="name" type="text" autocomplete="name" required></label>
+          <label for="email">Email<input id="email" name="email" type="email" autocomplete="email" required></label>
+          <label for="msg">Message<textarea id="msg" name="msg" required></textarea></label>
+          <div><button class="btn solid" type="submit">Send message</button></div>
+          <p id="status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="modal" id="modal" hidden>
+  <div class="panel" role="dialog" aria-modal="true" aria-labelledby="pTitle">
+    <button type="button" class="x" id="pClose" aria-label="Close project">×</button>
+    <span class="eyebrow" id="pKind" style="margin:0"></span>
+    <h3 id="pTitle"></h3>
+    <div id="pBody"></div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <p>© 2026 Genesis Llovido</p>
+    <p>I'm not a ghoul. I just write code like one.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

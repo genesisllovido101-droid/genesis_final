@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Genesis Interactive Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <div class="logo-wrap">
+      <div class="logo" id="profileLogo" role="img" aria-label="Kien's custom lightning logo">
+        <span class="logo-mark">G</span>
+        <span class="logo-spark">✦</span>
+      </div>
+    </div>
+
+    <h1 id="greeting">Hello! I'm Genesis</h1>
+    <p class="subtitle">Click any button to change this text.</p>
+
+    <form id="demoForm">
+      <label for="userInput">Input anything:</label>
+      <input id="userInput" name="userInput" type="text" autocomplete="off" placeholder="Type your name...">
+
+      <label class="select-label" for="yearSelect">Choose your year:</label>
+      <select id="yearSelect" name="yearSelect">
+        <option>1st year</option>
+        <option>2nd year</option>
+        <option>3rd year</option>
+        <option>4th year</option>
+        <option>5th year</option>
+      </select>
+
+      <div class="buttons">
+        <button type="button" id="clickButton">Click</button>
+        <button type="button" id="doubleButton">Double click</button>
+      </div>
+    </form>
+
+    <p id="message" class="message" aria-live="polite">Welcome Back!</p>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

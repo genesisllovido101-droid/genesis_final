@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .card {
+            background-color:rgb(216, 109, 109);
+            margin: 200px;
+            border: solid 2px rgb(88, 175, 175);
+            border-radius: 25px;
+            padding: 75px;
+        }
+
+        #info {
+            background-color:rgb(165, 80, 123);
+            margin: 100px;
+            text-align: left;
+            border-radius: 25px;
+            padding: 25px;
+        }
+        
+        button{
+            padding: 15px 25px;
+            background-color: rgb(33, 15, 190);
+            color: whitesmoke;
+            border-radius: 30px;
+            border: none;
+            height: 60px;
+            width: 170px;
+        }
+
+        table{
+            justify-content: center;
+            
+        }
+        #read {
+            background-color: rgb(61, 57, 57);
+            color: rgb(192, 197, 206);
+        }
+        
+    </style>    
+<body>
+     <div class="card">
+
+        <h1 id="message">Welcome, Students</h1>
+
+        <p>Welcome to my interactive profile</p>
+
+        <br><br>
+
+        <div id="title">
+
+            <div id="info">
+            <h3>Student Information</h3>
+            <p>Name: Genesis Llovido</p>
+            <p>Course: <span id="change">BSCS</span></p>
+            <p>Year Level: 3rd Year</p>
+            </div>
+
+           <button id="btnChange">Change Title</button>
+           
+           <button class="btnHide">Hide Profile</button>
+
+           <button class="btnShow">Show Profile</button>
+
+           <h1>Choose Course</h1>
+
+            <br>
+
+            <select id="course">
+
+            <option value="BSIT">BSIT</option>
+            <option value="BSCS">BSCS</option>
+            <option value="BSIS">BSIS</option>
+
+        </select>
+
+        <br><br>
+
+        <p id="name">Interact with the button above</p>
+
+        <br>
+
+        <h3>Student List</h3>
+
+        <br>
+
+        <p>Interact with the button above</p>
+
+        <table border="" align="center" id="table">
+            <tr id="read">
+                <th>No</th>
+                <th>Name</th>
+                <th>Section</th>
+                <th>Course</th>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>Genesis Llovido</td>
+                <td>BSCS31A</td>
+                <td>BSCS</td>
+               
+            </tr>
+
+             <tr>
+                <td>2</td>
+                <td>Lian Albert Laguitan</td>
+                <td>BSCS31A</td>
+                <td>BSCS</td>
+        
+            </tr>
+
+             <tr>
+                <td>3</td>
+                <td>Arthur Luyas</td>
+                <td>BSTM21C</td>
+                <td>BSTM</td>
+                  
+            </tr>
+
+             <tr>
+                <td>4</td>
+                <td>Lorence Bonicarlo</td>
+                <td>BSOA31D</td>
+                <td>BSOA</td>
+               
+            </tr>
+        </table>
+        <br><br>
+        <button id="btnOdd">Color Odd</button>
+        <button id="btnEven">Color Even</button>
+        <button class="hideTable">Hide Table</button>
+        <button class="showTable">Show Table</button>
+        </div>
+     </div>
+
+     <script src="script.js"></script>
+</body>
+</html>
